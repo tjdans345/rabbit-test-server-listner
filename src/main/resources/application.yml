@@ -1,0 +1,14 @@
+server:
+  port: 9057
+
+
+spring:
+  rabbitmq:
+    host: localhost # docker ? ???
+    port: 5672
+    username: username
+    password: password
+
+config:
+  app:
+    duration: 10000
