@@ -27,7 +27,6 @@ public class RabbitConsumer {
         rabbitMQTestService.insertDB(message);
         // 1. 주문 메시지 발행 시 주문 로직
 
-
     }
 
 }
