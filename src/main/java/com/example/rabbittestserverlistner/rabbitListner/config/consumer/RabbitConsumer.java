@@ -22,6 +22,8 @@ public class RabbitConsumer {
      */
     // queues 라는 네이밍을 보아 짐작할 수 있듯이, queue 는 리스트 형식으로 여러개를 입력할 수 있다.
     // ex) queues={"hello","world"}
+    // concurrency = "2" 는 한 큐가 2번의 일을 수행한다는 것
+    // @RabbitListener(queues = "meteor.queue", concurrency = "2")
     @RabbitListener(queues = "meteor.queue")
     public void processMessage(MessageDTO message) {
         log.info("message : {} ",message.toString());
