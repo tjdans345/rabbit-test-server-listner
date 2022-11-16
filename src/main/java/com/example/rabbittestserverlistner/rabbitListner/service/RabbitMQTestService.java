@@ -1,6 +1,7 @@
 package com.example.rabbittestserverlistner.rabbitListner.service;
 
 import com.example.rabbittestserverlistner.rabbitListner.domain.dto.ContentMessageDTO;
+import com.example.rabbittestserverlistner.rabbitListner.domain.dto.MessageDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;
@@ -15,11 +16,11 @@ import java.util.List;
 @Service
 public class RabbitMQTestService {
 
-    List<Message> testList = new ArrayList<>();
+    List<MessageDTO> testList = new ArrayList<>();
 
 
-    public void insertDB(Message message) {
-        log.info("messageBody : {} ", message.getBody());
+    public void insertDB(MessageDTO message) {
+        log.info("messageBody : {} ", message);
         testList.add(message);
         log.info("testList : {} ", testList);
     }
